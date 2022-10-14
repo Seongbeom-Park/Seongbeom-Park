@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:profile/progress_column.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,18 +16,42 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blueGrey,
       ),
-      home: const MainWidget(),
+      home: const MainPage(),
     );
   }
 }
 
-class MainWidget extends StatelessWidget {
-  const MainWidget({super.key});
+class MainPage extends StatelessWidget {
+  const MainPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: const Text('개발자 박성범')), body: const BodyWidget());
+        appBar: AppBar(
+          title: const Text('개발자 박성범'),
+          // TODO: change language
+          // actions: const [
+          //   Icon(Icons.language),
+          //   LanguageDropdown(),
+          // ],
+        ),
+        body: const BodyWidget());
+  }
+}
+
+class LanguageDropdown extends StatelessWidget {
+  const LanguageDropdown({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return DropdownButton(
+      value: 'ko',
+      items: const [
+        DropdownMenuItem(value: 'ko', child: Text('한국어')),
+        DropdownMenuItem(value: 'en', child: Text('English')),
+      ],
+      onChanged: (_) {},
+    );
   }
 }
 
@@ -35,15 +60,15 @@ class BodyWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(children: [
+    return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
       const Introduction(),
-      const Filter(),
+      // const ProjectFilter(), // TODO: add filter
       Expanded(
           child: Row(
         children: const [
-          Expanded(child: ProgressColumn(title: 'Todo')),
-          Expanded(child: ProgressColumn(title: 'In Progress')),
-          Expanded(child: ProgressColumn(title: 'Done')),
+          ProgressColumn.todo(),
+          ProgressColumn.progress(),
+          ProgressColumn.done(),
         ],
       )),
     ]);
@@ -56,71 +81,7 @@ class Introduction extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Text('''
-인사말
+인사말:
 안녕하세요 개발자 박성범입니다''');
-  }
-}
-
-class Filter extends StatelessWidget {
-  const Filter({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: const [
-        ChoiceChip(label: Text('publication'), selected: false),
-        ChoiceChip(label: Text('patent'), selected: false),
-        ChoiceChip(label: Text('project'), selected: false),
-      ],
-    );
-  }
-}
-
-class ProgressColumn extends StatelessWidget {
-  final String title;
-
-  const ProgressColumn({super.key, required this.title});
-
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-        child: Column(
-      children: [
-        Text(title),
-        const ProjectCard(
-          categories: [],
-        ),
-      ],
-    ));
-  }
-}
-
-enum Category {
-  publication,
-  patent,
-  project,
-}
-
-class ProjectCard extends StatelessWidget {
-  final List<Category> categories;
-
-  const ProjectCard({super.key, required this.categories});
-
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      child: Expanded(
-          child: Row(
-        children: [
-          Column(
-            children: const [
-              Text('title'),
-              Text('contents'),
-              // add chips here
-            ],
-          )
-        ],
-      )),
-    );
   }
 }

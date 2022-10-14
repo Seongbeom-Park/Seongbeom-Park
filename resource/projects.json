@@ -1,0 +1,213 @@
+[
+    {
+        "status": "todo",
+        "title": {
+            "en": "Machine Learning Study",
+            "ko": "기계 학습 공부"
+        },
+        "description": {
+            "en": "Study machine learning and TensorFlow to create target model",
+            "ko": "원하는 모델 생성을 위한 기계 학습 공부"
+        },
+        "categories": ["study"]
+    },
+    {
+        "status": "todo",
+        "title": {
+            "en": "RISC-V Study",
+            "ko": "RISC-V 공부"
+        },
+        "description": {
+            "en": "Study RISC-V to create a new CPU model",
+            "ko": "원하는 CPU 설계를 위한 RISC-V 공부"
+        },
+        "categories": ["study", "riscv"]
+    },
+    {
+        "status": "progress",
+        "title": "github.io",
+        "description": {
+            "en": "github profile page",
+            "ko": "깃허브 프로필 페이지"
+        },
+        "categories": ["repository"],
+        "year": "2022",
+        "link": "https://github.com/Seongbeom-Park/seongbeom-park.github.io"
+    },
+
+    {
+        "status": "done",
+        "title": {
+            "en": "UNIST Bachelor's Degree",
+            "ko": "UNIST 학사 학위"
+        },
+        "description": {
+            "en": "(1st track) Computer Science & Engineering / (2nd track) Electrical Engineering",
+            "ko": "(1트랙) 컴퓨터공학과 / (2트랙) 전기전자공학과"
+        },
+        "categories": ["experience", "embedded"],
+        "year": {
+            "from": 2011,
+            "to": 2015
+        },
+        "link": "https://github.com/Seongbeom-Park/GraduationProject"
+    },
+    {
+        "status": "progress",
+        "title": {
+            "en": "UNIST Combind Master's and Docor Degree",
+            "ko": "UNIST 석박 통합 과정"
+        },
+        "description": {
+            "en": "(Leave) Computer Science and Engineering",
+            "ko": "(휴학) 컴퓨터공학과"
+        },
+        "categories": ["experience", "bigdata", "spark"],
+        "year": {
+            "from": 2016
+        }
+    },
+    {
+        "status": "done",
+        "title": "TmaxOS",
+        "description": {
+            "en": "Remote meeting application development",
+            "ko": "원격 화상 회의 앱 개발"
+        },
+        "categories": ["experience", "android", "ios", "web", "react", "reactNative"],
+        "year": {
+            "from": 2020,
+            "to": 2022
+        }
+    },
+
+    {
+        "status": "done",
+        "title": "Design and Implementation of Bandwidth-Aware Memory Placement and Migration Policies for Heterogeneous Memory Systems",
+        "description": {
+            "en": "Bandwidth-aware memory placement and migraion",
+            "ko": "메모리 대역폭에 따른 할당 및 이주"
+        },
+        "categories": ["publication"],
+        "year": 2017,
+        "link": "https://dl.acm.org/doi/10.1145/3079079.3079092"
+    },
+    {
+        "status": "done",
+        "title": "RPPC: a Holistic Runtime System for Maximizing Performance under Power Capping",
+        "description": {
+            "en": "Power-performance management runtime system",
+            "ko": "주어진 전력으로 성능을 최대화하는 런타임 시스템"
+        },
+        "categories": ["publication"],
+        "year": 2018,
+        "link": "https://ieeexplore.ieee.org/abstract/document/8411008"
+    },
+    {
+        "status": "done",
+        "title": "HyPart: A Hybrid Technique for Practical Memory Bandwidth Partitioning on Commodity Servers",
+        "description": {
+            "en": "Partitioning memory bandwidth to enhance overall system performance",
+            "ko": "메모리 대역폭을 분배하여 시스템의 전제 성능을 향상시키는 기법"
+        },
+        "categories": ["publication"],
+        "year": 2018,
+        "link": "https://dl.acm.org/doi/abs/10.1145/3243176.3243211"
+    },
+    {
+        "status": "done",
+        "title": "CoPart: Coordinated Partitioning of Last-Level Cache and Memory Bandwidth for Fairness-Aware Workload Consolidation on Commodity Servers",
+        "description": {
+            "en": "Fairness-aware LLC & memory bandwidth partitioning to enhance overall system performance",
+            "ko": "공평하게 LLC와 메모리 대역폭을 분배하여 시스템의 전체 성능을 향상시키는 기법"
+        },
+        "categories": ["publication"],
+        "year": 2019,
+        "link": "https://dl.acm.org/doi/abs/10.1145/3302424.3303963"
+    },
+    {
+        "status": "done",
+        "title": "POSTER: The Performance Impact of Thread Packing on Synchronization-Intensive Applications",
+        "description": {
+            "en": "Analyze thread-packing for synchronization-intensive application",
+            "ko": "스레드 패킹 기술이 동기화가 자주 일어나는 응용에 주는 영향 분석"
+        },
+        "categories": ["publication"],
+        "year": 2019,
+        "link": "https://ieeexplore.ieee.org/abstract/document/8891622"
+    },
+    {
+        "status": "done",
+        "title": "MOSAIC: Heterogeneity-, Communication-, and Constraint-Aware Model Slicing and Execution for Accurate and Efficient Inference",
+        "description": {
+            "en": "Machine learning model slicing and placement for the heterogeneous system",
+            "ko": "이기종 시스템을 위한 기계학습 모델 분할 및 할당 기법"
+        },
+        "categories": ["publication"],
+        "year": 2019,
+        "link": "https://ieeexplore.ieee.org/abstract/document/8891642"
+    },
+    {
+        "status": "done",
+        "title": "Hotness- and Lifetime-Aware Data Placement and Migration for High-Performance Deep Learning on Heterogeneous Memory Systems",
+        "description": {
+            "en": "Considering hotness and lifetime to place and migrate data for the heterogeneous system",
+            "ko": "데이터의 접근 빈도 및 라이프타임을 고려한 이기종 시스템을 위한 할당 및 이주 기법"
+        },
+        "categories": ["publication"],
+        "year": 2020,
+        "link": "https://ieeexplore.ieee.org/abstract/document/8883082"
+    },
+    {
+        "status": "done",
+        "title": "PALM: Progress- and Locality-Aware Adaptive Task Migration for Efficient Thread Packing",
+        "description": {
+            "en": "Thread migraion considering progress and locality for thread packing",
+            "ko": "스레드 패킹을 위한 작업 진척도와 지역성을 고려한 스레드 이주 기법"
+        },
+        "categories": ["publication"],
+        "year": 2021,
+        "link": "https://ieeexplore.ieee.org/abstract/document/9460449"
+    },
+
+    {
+        "status": "done",
+        "title": {
+            "en": "Rotating power device for small flying object and small flying object comprising the same",
+            "ko": "소형 비행물체용 회전 동력장치 및 이를 설치한 소형 비행물체"
+        },
+        "description": "KR101528565B1",
+        "categories": ["patent"],
+        "year": 2015,
+        "link": "https://patents.google.com/patent/KR101528565B1/ko"
+    },
+    {
+        "status": "done",
+        "title": {
+            "en": "Apparatus and method for controlling stability of unmanned aerial vehicle",
+            "ko": "무인항공기 및 무인항공기 자세 제어 방법"
+        },
+        "description": "KR101878338B1",
+        "categories": ["patent"],
+        "year": 2018,
+        "link": "https://patents.google.com/patent/KR101878338B1/ko"
+    },
+    {
+        "status": "done",
+        "title": "Apparatus and method for controlling stability of unmanned aerial vehicle",
+       
+        "description": "US10562622B2",
+        "categories": ["patent"],
+        "year": 2020,
+        "link": "https://patents.google.com/patent/US10562622B2/en"
+    },
+    {
+        "status": "done",
+        "title": "Method and apparatus for partitioning memory bandwidth of system",
+       
+        "description": "US20200125507A1",
+        "categories": ["patent"],
+        "year": 2020,
+        "link": "https://patents.google.com/patent/US20200125507A1/en"
+    }
+]
