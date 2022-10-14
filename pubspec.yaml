@@ -72,6 +72,7 @@ flutter:
     - resource/icons/github/GitHub-Mark-Light-32px.png
     - resource/icons/github/GitHub-Mark-Light-64px.png
     - resource/icons/github/GitHub-Mark-Light-120px-plus.png
+    - resource/portrait.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

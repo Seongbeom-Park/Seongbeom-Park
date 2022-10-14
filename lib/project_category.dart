@@ -31,6 +31,7 @@ enum ProjectCategory {
   final Widget icon;
   const ProjectCategory({required this.name, Widget? icon})
       : icon = icon ?? const Icon(Icons.article);
+
   Chip chip() {
     return Chip(
       label: Text(name),

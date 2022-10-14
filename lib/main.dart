@@ -74,6 +74,7 @@ class BodyWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
       const Introduction(),
+
       // const ProjectFilter(), // TODO: add filter
       Expanded(
           child: Row(
@@ -93,6 +94,9 @@ class Introduction extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
+      // leading: Image.asset('resource/portrait.jpg'),
+      // leading:
+      //     CircleAvatar(backgroundImage: AssetImage('resource/portrait.jpg')),
       title: const Text('안녕하세요. 개발자 박성범입니다.'),
       subtitle: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         const Text(

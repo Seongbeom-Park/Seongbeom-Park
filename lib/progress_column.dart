@@ -15,7 +15,6 @@ class ProjectFilter extends StatelessWidget {
       Flexible(
         child: Wrap(
           spacing: 2.0,
-          runSpacing: 2.0,
           children: ProjectCategory.values
               .map(
                 (category) => category.choiceChip(),
@@ -44,7 +43,7 @@ class ProgressColumn extends StatelessWidget {
     // TODO: i18n
     switch (type) {
       case ProgressType.todo:
-        return "관심 분야";
+        return "계획 중";
       case ProgressType.progress:
         return "진행 중";
       case ProgressType.done:
