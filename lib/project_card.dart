@@ -38,27 +38,29 @@ class ProjectCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-        child: Column(children: [
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
       ListTile(
         leading: categories.first.icon,
-        title: Text(title, softWrap: false, overflow: TextOverflow.ellipsis),
-        subtitle:
-            Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          Text(description, overflow: TextOverflow.ellipsis, maxLines: 2),
-          Wrap(
-              spacing: 3,
-              runSpacing: 3,
-              children: categories.map((category) {
-                return category.chip();
-              }).toList())
-        ]),
-        isThreeLine: true,
+        title: Text(title.replaceAll('', '\u{200B}'),
+            softWrap: false, overflow: TextOverflow.ellipsis),
+        subtitle: Text(description.replaceAll('', '\u{200B}'),
+            overflow: TextOverflow.ellipsis, maxLines: 2),
         dense: true,
+        minLeadingWidth: 0.1,
         onTap: () {
           if (url.isNotEmpty) launchUrl(Uri.parse(url));
           // TODO: open dialog
         },
       ),
+      Padding(
+        padding: const EdgeInsets.all(4),
+        child: Wrap(
+            spacing: 3,
+            runSpacing: 3,
+            children: categories.map((category) {
+              return category.chip();
+            }).toList()),
+      )
     ]));
   }
 }

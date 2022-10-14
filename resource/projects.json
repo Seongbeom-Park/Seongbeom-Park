@@ -6,8 +6,8 @@
             "ko": "기계 학습 공부"
         },
         "description": {
-            "en": "Study machine learning and TensorFlow to create target model",
-            "ko": "원하는 모델 생성을 위한 기계 학습 공부"
+            "en": "Study machine learning and TensorFlow to create a new model",
+            "ko": "모델 생성을 위한 기계 학습 공부"
         },
         "categories": ["study", "tensorflow"]
     },
@@ -19,7 +19,7 @@
         },
         "description": {
             "en": "Study RISC-V to create a new CPU model",
-            "ko": "원하는 CPU 설계를 위한 RISC-V 공부"
+            "ko": "CPU 설계를 위한 RISC-V 공부"
         },
         "categories": ["study", "riscv"]
     },

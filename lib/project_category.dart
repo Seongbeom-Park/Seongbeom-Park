@@ -28,8 +28,8 @@ enum ProjectCategory {
   ;
 
   final String name;
-  final Icon icon;
-  const ProjectCategory({required this.name, Icon? icon})
+  final Widget icon;
+  const ProjectCategory({required this.name, Widget? icon})
       : icon = icon ?? const Icon(Icons.article);
   Chip chip() {
     return Chip(
