@@ -7,6 +7,7 @@ enum ProjectCategory {
   repository(name: 'repository', icon: Icon(Icons.storage_rounded)),
   experience(name: 'experience', icon: Icon(Icons.person)),
   study(name: 'study', icon: Icon(Icons.battery_2_bar_rounded)),
+  extension(name: 'extension', icon: Icon(Icons.extension)),
 
   // framwork
   tensorflow(name: 'tensorflow'),
@@ -14,6 +15,9 @@ enum ProjectCategory {
   reactNative(name: 'react native'),
   spark(name: 'spark'),
   bigdata(name: 'bigdata'),
+  flutter(name: 'flutter'),
+  lit(name: 'lit'),
+  material(name: 'material'),
 
   // platform
   android(name: 'android'),

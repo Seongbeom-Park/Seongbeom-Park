@@ -46,9 +46,11 @@ class ProjectCard extends StatelessWidget {
             Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Text(description, overflow: TextOverflow.ellipsis, maxLines: 2),
           Wrap(
+              spacing: 3,
+              runSpacing: 3,
               children: categories.map((category) {
-            return category.chip();
-          }).toList())
+                return category.chip();
+              }).toList())
         ]),
         isThreeLine: true,
         dense: true,
