@@ -37,30 +37,10 @@ class ProjectCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Icon leading = const Icon(Icons.article);
-    if (categories.isNotEmpty) {
-      switch (categories.first) {
-        case ProjectCategory.publication:
-          leading = const Icon(Icons.article);
-          break;
-        case ProjectCategory.patent:
-          leading = const Icon(Icons.lightbulb);
-          break;
-        case ProjectCategory.repository:
-          leading = const Icon(Icons.storage_rounded);
-          break;
-        case ProjectCategory.experience:
-          leading = const Icon(Icons.person);
-          break;
-        case ProjectCategory.study:
-          leading = const Icon(Icons.battery_2_bar_rounded);
-          break;
-      }
-    }
     return Card(
         child: Column(children: [
       ListTile(
-        leading: leading,
+        leading: categories.first.icon,
         title: Text(title, softWrap: false, overflow: TextOverflow.ellipsis),
         subtitle:
             Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -74,7 +54,7 @@ class ProjectCard extends StatelessWidget {
         dense: true,
         onTap: () {
           if (url.isNotEmpty) launchUrl(Uri.parse(url));
-          print(title);
+          // TODO: open dialog
         },
       ),
     ]));

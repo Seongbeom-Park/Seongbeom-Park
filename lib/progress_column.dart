@@ -11,7 +11,7 @@ class ProjectFilter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(children: [
-      Icon(Icons.filter_list_rounded),
+      const Icon(Icons.filter_list_rounded),
       Flexible(
         child: Wrap(
           spacing: 2.0,

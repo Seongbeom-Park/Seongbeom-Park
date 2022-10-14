@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 enum ProjectCategory {
   // high-level
-  publication(name: 'publication'),
-  patent(name: 'patent'),
-  repository(name: 'repository'),
-  experience(name: 'experience'),
-  study(name: 'study'),
+  publication(name: 'publication', icon: Icon(Icons.article)),
+  patent(name: 'patent', icon: Icon(Icons.lightbulb)),
+  repository(name: 'repository', icon: Icon(Icons.storage_rounded)),
+  experience(name: 'experience', icon: Icon(Icons.person)),
+  study(name: 'study', icon: Icon(Icons.battery_2_bar_rounded)),
 
   // framwork
   tensorflow(name: 'tensorflow'),
@@ -24,7 +24,9 @@ enum ProjectCategory {
   ;
 
   final String name;
-  const ProjectCategory({required this.name});
+  final Icon icon;
+  const ProjectCategory({required this.name, Icon? icon})
+      : icon = icon ?? const Icon(Icons.article);
   Chip chip() {
     return Chip(
       label: Text(name),
