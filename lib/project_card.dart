@@ -21,7 +21,7 @@ class ProjectCard extends StatelessWidget {
     readData(String key) {
       if (!data.containsKey(key)) return '';
       if (data[key] is Map) {
-        return data[key][Localizations.localeOf(context).toString()];
+        return data[key][Localizations.localeOf(context).toLanguageTag()];
       }
       return data[key];
     }

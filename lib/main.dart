@@ -4,21 +4,27 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:profile/progress_column.dart';
 
+typedef SetLocale = void Function(Locale locale);
+
 void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  static String home = 'https://github.com/Seongbeom-Park';
-  static String mail = 'sparkamita90@gmail.com';
-  static Locale? _locale;
-
-  static set locale(Locale targetLocale) => _locale = targetLocale;
-  static get supportedLocales => AppLocalizations.supportedLocales;
+class MyApp extends StatefulWidget {
+  static const String home = 'https://github.com/Seongbeom-Park';
+  static const String mail = 'sparkamita90@gmail.com';
 
   const MyApp({super.key});
 
-  // This widget is the root of your application.
+  @override
+  State<StatefulWidget> createState() => MyAppState();
+}
+
+class MyAppState extends State<MyApp> {
+  Locale? _locale;
+
+  set locale(Locale locale) => setState(() => _locale = locale);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -37,13 +43,15 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blueGrey,
       ),
-      home: const MainPage(),
+      home: MainPage(setLocale: (Locale _) => locale = _),
     );
   }
 }
 
 class MainPage extends StatelessWidget {
-  const MainPage({super.key});
+  final SetLocale setLocale;
+
+  const MainPage({super.key, required this.setLocale});
 
   @override
   Widget build(BuildContext context) {
@@ -58,8 +66,8 @@ class MainPage extends StatelessWidget {
             IconButton(
                 onPressed: () => launchUrl(Uri.parse('mailto:${MyApp.mail}')),
                 icon: const Icon(Icons.email_outlined)),
-            // const Icon(Icons.language),
-            // const LanguageDropdown(),
+            const Icon(Icons.language),
+            LanguageDropdown(setLocale: setLocale),
           ],
         ),
         body: const BodyWidget());
@@ -67,17 +75,20 @@ class MainPage extends StatelessWidget {
 }
 
 class LanguageDropdown extends StatelessWidget {
-  const LanguageDropdown({super.key});
+  final SetLocale setLocale;
+
+  const LanguageDropdown({super.key, required this.setLocale});
 
   @override
   Widget build(BuildContext context) {
     return DropdownButton(
-      value: Localizations.localeOf(context).toString(),
+      icon: const Icon(Icons.arrow_drop_down),
+      value: Localizations.localeOf(context).toLanguageTag(),
       items: const [
         DropdownMenuItem(value: 'ko', child: Text('한국어')),
         DropdownMenuItem(value: 'en', child: Text('English')),
       ],
-      onChanged: (_) {},
+      onChanged: (value) => setLocale(Locale(value!)),
     );
   }
 }
