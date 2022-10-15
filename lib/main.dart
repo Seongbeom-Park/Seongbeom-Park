@@ -101,7 +101,7 @@ class Introduction extends StatelessWidget {
       subtitle: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         const Text(
             '''세상에 없었던 새로운 아이디어를 통해 많은 사람들에게 도움을 줄 수 있는 지속 가능한 기술 개발을 목표로 하고 있습니다.
-간단한 MCU 기판 디자인부터, 임베디드 시스템, OS, 로봇, 안드로이드, iOS, 웹, 자바 어플리케이션, 빅데이터 시스템, 기계 학습까지 다양한 소프트웨어 스택에서 개발을 진행한 경험이 있습니다.
+간단한 PCB 디자인부터, 임베디드 시스템, OS, 로봇, 안드로이드 앱, iOS 앱, 웹, 자바 어플리케이션, 백엔드 서버, 빅데이터 시스템, 기계 학습까지 다양한 소프트웨어 스택에서 개발한 경험이 있습니다.
 현재는 대학원 석박 통합과정을 휴학한 상태이며, 그동안 익힌 기술들을 활용하여 창업을 시도하고 있습니다.'''),
         Wrap(children: [const Text('email: '), SelectableText(MyApp.mail)])
       ]),
