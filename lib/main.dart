@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:profile/progress_column.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:profile/progress_column.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,6 +11,10 @@ void main() {
 class MyApp extends StatelessWidget {
   static String home = 'https://github.com/Seongbeom-Park';
   static String mail = 'sparkamita90@gmail.com';
+  static Locale? _locale;
+
+  static set locale(Locale targetLocale) => _locale = targetLocale;
+  static get supportedLocales => AppLocalizations.supportedLocales;
 
   const MyApp({super.key});
 
@@ -17,6 +23,17 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: '개발자 박성범',
+      localizationsDelegates: const [
+        AppLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: const [
+        Locale('en'),
+        Locale('ko'),
+      ],
+      locale: _locale,
       theme: ThemeData(
         primarySwatch: Colors.blueGrey,
       ),
@@ -32,19 +49,17 @@ class MainPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('개발자 박성범'),
+          title: Text(AppLocalizations.of(context)!.title),
           actions: [
             IconButton(
                 onPressed: () => launchUrl(Uri.parse(MyApp.home)),
-                // icon: const Icon(Icons.home_outlined)),
                 icon: Image.asset(
                     'resource/icons/github/GitHub-Mark-Light-64px.png')),
             IconButton(
                 onPressed: () => launchUrl(Uri.parse('mailto:${MyApp.mail}')),
                 icon: const Icon(Icons.email_outlined)),
-            // TODO: change language
-            // Icon(Icons.language),
-            // LanguageDropdown(),
+            // const Icon(Icons.language),
+            // const LanguageDropdown(),
           ],
         ),
         body: const BodyWidget());
@@ -57,7 +72,7 @@ class LanguageDropdown extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DropdownButton(
-      value: 'ko',
+      value: Localizations.localeOf(context).toString(),
       items: const [
         DropdownMenuItem(value: 'ko', child: Text('한국어')),
         DropdownMenuItem(value: 'en', child: Text('English')),
@@ -74,7 +89,6 @@ class BodyWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
       const Introduction(),
-
       // const ProjectFilter(), // TODO: add filter
       Expanded(
           child: Row(
@@ -94,15 +108,9 @@ class Introduction extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      // leading: Image.asset('resource/portrait.jpg'),
-      // leading:
-      //     CircleAvatar(backgroundImage: AssetImage('resource/portrait.jpg')),
-      title: const Text('안녕하세요. 개발자 박성범입니다.'),
+      title: Text(AppLocalizations.of(context)!.greeting),
       subtitle: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        const Text(
-            '''세상에 없었던 새로운 아이디어를 통해 많은 사람들에게 도움을 줄 수 있는 지속 가능한 기술 개발을 목표로 하고 있습니다.
-간단한 PCB 디자인부터, 임베디드 시스템, OS, 로봇, 안드로이드 앱, iOS 앱, 웹, 자바 어플리케이션, 백엔드 서버, 빅데이터 시스템, 기계 학습까지 다양한 소프트웨어 스택에서 개발한 경험이 있습니다.
-현재는 대학원 석박 통합과정을 휴학한 상태이며, 그동안 익힌 기술들을 활용하여 창업을 시도하고 있습니다.'''),
+        Text(AppLocalizations.of(context)!.introduction),
         Wrap(children: [const Text('email: '), SelectableText(MyApp.mail)])
       ]),
       minVerticalPadding: 12,

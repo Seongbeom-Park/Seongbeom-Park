@@ -53,7 +53,7 @@
     {
         "status": "progress",
         "title": {
-            "en": "UNIST Combind Master's and Docor Degree",
+            "en": "UNIST Combind Master's and Doctor Degree",
             "ko": "UNIST 석박 통합 과정"
         },
         "description": {
@@ -69,10 +69,10 @@
         "status": "done",
         "title": "TmaxOS",
         "description": {
-            "en": "Remote meeting application development",
-            "ko": "원격 화상 회의 앱 개발"
+            "en": "Remote meeting application and server development",
+            "ko": "원격 화상 회의 앱 및 서버 개발"
         },
-        "categories": ["experience", "react", "reactNative", "android", "ios", "web"],
+        "categories": ["experience", "react", "reactNative", "android", "ios", "web", "owt"],
         "year": {
             "from": 2020,
             "to": 2022

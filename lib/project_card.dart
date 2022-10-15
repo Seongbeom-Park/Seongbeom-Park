@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:profile/project_category.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class ProjectCard extends StatelessWidget {
   final String title;
@@ -16,12 +17,11 @@ class ProjectCard extends StatelessWidget {
       String? url})
       : url = url ?? '';
 
-  factory ProjectCard.fromData(Map data) {
-    readData(String key, {String? language}) {
+  factory ProjectCard.fromData(BuildContext context, Map data) {
+    readData(String key) {
       if (!data.containsKey(key)) return '';
       if (data[key] is Map) {
-        language ??= 'ko';
-        return data[key][language];
+        return data[key][Localizations.localeOf(context).toString()];
       }
       return data[key];
     }

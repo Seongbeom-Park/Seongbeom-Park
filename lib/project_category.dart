@@ -18,6 +18,7 @@ enum ProjectCategory {
   flutter(name: 'flutter'),
   lit(name: 'lit'),
   material(name: 'material'),
+  owt(name: 'owt'),
 
   // platform
   android(name: 'android'),
