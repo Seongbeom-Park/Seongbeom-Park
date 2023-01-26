@@ -8,6 +8,7 @@ enum ProjectCategory {
   experience(name: 'experience', icon: Icon(Icons.person)),
   study(name: 'study', icon: Icon(Icons.battery_2_bar_rounded)),
   extension(name: 'extension', icon: Icon(Icons.extension)),
+  algorithm(name: 'algorithm', icon: Icon(Icons.psychology)),
 
   // framwork
   tensorflow(name: 'tensorflow'),
