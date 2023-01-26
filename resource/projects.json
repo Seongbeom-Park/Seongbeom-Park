@@ -26,14 +26,35 @@
     
     {
         "status": "progress",
-        "title": "github.io",
-        "description": {
-            "en": "github profile page",
-            "ko": "깃허브 프로필 페이지"
+        "title": {
+            "en": "(CTO) Pillars of Creation",
+            "ko": "(CTO) 주식회사 창조의기둥"
         },
-        "categories": ["repository", "flutter", "material"],
-        "year": 2022,
-        "link": "https://github.com/Seongbeom-Park/seongbeom-park.github.io"
+        "description": {
+            "en": "Pillars of Creation CTO",
+            "ko": "주식회사 창조의기둥 기술총책임"
+        },
+        "categories": ["experience"],
+        "year": {
+            "from": 2023
+        },
+        "link": "https://www.changjostar.com"
+    },
+    {
+        "status": "progress",
+        "title": {
+            "en": "Assignment of high school equalization",
+            "ko": "평준화고교 배정 알고리즘 개발"
+        },
+        "description": {
+            "en": "Develop a new algorithm for enhancing quality of assignement on high school equalization",
+            "ko": "평준화고교 배정 결과의 품질을 향상시키기 위한 새로운 알고리즘 개발"
+        },
+        "categories": ["algorithm"],
+        "year": {
+            "from": 2023
+        },
+        "link": "https://www.changjostar.com/평준화배정"
     },
     {
         "status": "progress",
@@ -51,10 +72,10 @@
     },
 
     {
-        "status": "progress",
+        "status": "done",
         "title": {
-            "en": "UNIST Combind Master's and Doctor Degree",
-            "ko": "UNIST 석박 통합 과정"
+            "en": "UNIST Combind Master's and Doctor Degree Completion",
+            "ko": "UNIST 석박 통합 과정 수료"
         },
         "description": {
             "en": "(Leave) Computer Science and Engineering",
@@ -62,7 +83,8 @@
         },
         "categories": ["experience", "bigdata", "spark"],
         "year": {
-            "from": 2016
+            "from": 2016,
+            "to": 2020
         }
     },
     {
