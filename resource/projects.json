@@ -27,12 +27,12 @@
     {
         "status": "progress",
         "title": {
-            "en": "Pillars of Creation",
-            "ko": "주식회사 창조의기둥"
+            "en": "Pillars of Creation Corp.",
+            "ko": "(주) 창조의기둥"
         },
         "description": {
-            "en": "CTO",
-            "ko": "기술총책임자"
+            "en": "Founder",
+            "ko": "설립자"
         },
         "categories": ["experience"],
         "year": {
