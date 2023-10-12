@@ -98,13 +98,11 @@ class BodyWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-      const Introduction(),
-      // const ProjectFilter(), // TODO: add filter
+    return const Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+      Introduction(),
       Expanded(
           child: Row(
-        children: const [
-          ProgressColumn.todo(),
+        children: [
           ProgressColumn.progress(),
           ProgressColumn.done(),
         ],

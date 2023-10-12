@@ -1,30 +1,5 @@
 [
     {
-        "status": "todo",
-        "title": {
-            "en": "Machine Learning Study",
-            "ko": "기계 학습 공부"
-        },
-        "description": {
-            "en": "Study machine learning and TensorFlow to create a new model",
-            "ko": "모델 생성을 위한 기계 학습 공부"
-        },
-        "categories": ["study", "tensorflow"]
-    },
-    {
-        "status": "todo",
-        "title": {
-            "en": "RISC-V Study",
-            "ko": "RISC-V 공부"
-        },
-        "description": {
-            "en": "Study RISC-V to create a new CPU model",
-            "ko": "CPU 설계를 위한 RISC-V 공부"
-        },
-        "categories": ["study", "riscv"]
-    },
-    
-    {
         "status": "progress",
         "title": {
             "en": "Pillars of Creation Corp.",
@@ -78,8 +53,8 @@
             "ko": "UNIST 석박 통합 과정 수료"
         },
         "description": {
-            "en": "(Leave) Computer Science and Engineering",
-            "ko": "(휴학) 컴퓨터공학과"
+            "en": "Computer Science and Engineering",
+            "ko": "컴퓨터공학과"
         },
         "categories": ["experience", "bigdata", "spark"],
         "year": {
